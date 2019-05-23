@@ -1,3 +1,4 @@
+<div class="mt-3"><h3>Catalog</h3></div>
 <div class="card-deck mt-3">
 <?php foreach ($products as $product) :?>
     <div class="card">

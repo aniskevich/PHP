@@ -6,5 +6,5 @@ $query .= "VALUES ('$_POST[name]', '$_POST[category]', '$_POST[type]','$_POST[co
 mysqli_query($link, $query);
 mysqli_close($link);
 echo $query;
-header('Location: ../catalog.php');
+header('Location: ../index.php');
 die;

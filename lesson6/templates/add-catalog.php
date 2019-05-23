@@ -1,4 +1,4 @@
-<button type="button" class="mt-5 btn btn-primary" data-toggle="modal" data-target="#addProductModal">
+<button type="button" class="mt-3 btn btn-primary" data-toggle="modal" data-target="#addProductModal">
   ADD PRODUCT TO CATALOG
 </button>
 
