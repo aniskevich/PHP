@@ -1,6 +1,7 @@
 <?php
 define ("DIR", $_SERVER['DOCUMENT_ROOT']."/lesson6/");
 require_once DIR."templates/header.php";
+require_once DIR."public/auth-check.php";
 require_once DIR."public/add-catalog-options.php";
 require_once DIR."templates/add-catalog.php";
 require_once DIR."public/catalog-layout.php";

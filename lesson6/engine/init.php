@@ -6,3 +6,4 @@
         $config['db_pass'],
         $config['db_name']
     );
+    session_start();

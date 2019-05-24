@@ -1,12 +1,14 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT']."/lesson6/engine/init.php";
-$result = mysqli_fetch_assoc(mysqli_query($link, "SELECT username FROM users WHERE username = '$_POST[login]'"));
-if (!$result['username']) {
+$user = mysqli_fetch_assoc(mysqli_query($link, "SELECT username FROM users WHERE username = '$_POST[login]'"));
+if (!$user['username']) {
     if ($_POST['password'] === $_POST['repassword']) {
         $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
         $query = "INSERT INTO users (username, pass) VALUES ('$_POST[login]', '$password')";
         mysqli_query($link, $query); 
-        mysqli_close($link);   
+        mysqli_close($link);
+        $_SESSION['auth'] = true;
+        $_SESSION['username'] = $_POST['login'];   
         header('Location: ../cabinet.php');
     }
     else {
