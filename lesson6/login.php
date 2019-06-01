@@ -1,5 +1,6 @@
 <?php
-define ("DIR", $_SERVER['DOCUMENT_ROOT']."/lesson6/");
-require_once DIR."templates/header.php";
-require_once DIR."templates/login.php";
-require_once DIR."templates/footer.php";
+    $config = require_once "config/config.php";
+    require_once "engine/init.php";
+    require_once "templates/header.php";
+    require_once "templates/login.php";
+    require_once "templates/footer.php";

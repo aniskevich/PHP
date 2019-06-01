@@ -1,2 +1,4 @@
 
 lesson 2/index.php
+*.xml
+.idea/PHP.iml

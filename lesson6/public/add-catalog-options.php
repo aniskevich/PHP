@@ -1,5 +1,4 @@
 <?php
-    $link = mysqli_connect("localhost", "user", "x4kbTNyvus4XNGxa", "PHP");
     $category = "SELECT category FROM categories";
     $type = "SELECT `type` FROM product_types";
     $size = "SELECT size FROM size";
@@ -14,4 +13,3 @@
             $options[] = $row;
         }
     }
-    mysqli_close($link);

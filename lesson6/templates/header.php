@@ -21,14 +21,14 @@
         <a class="nav-link" href="reviews.php">Reviews</a>
       </li>
     </ul>
-    <?php session_start(); ?>
-    <?php if (!$_SESSION['auth']) :?>
+    <?php if (!isset($_SESSION['auth'])) :?>
     <form method="POST">
         <button type="submit" class="btn btn-danger mr-1" formaction="register.php">REGISTER</button>
         <button type="submit" class="btn btn-success" formaction="login.php">LOG IN</button>
     </form>
     <?php else :?>
     <form method="POST">
+        <button type="submit" class="btn btn-primary" formaction="orders.php">ORDERS</button>
         <button type="button" class="btn btn-primary cartModal">CART</button>
         <button type="submit" class="btn btn-danger mr-1" formaction="cabinet.php">CABINET</button>
         <button type="submit" class="btn btn-success" formaction="public/logout.php">LOG OUT</button>
@@ -36,7 +36,7 @@
     <?php endif ?>
   </div>
 </nav>
-<?php 
-  require_once DIR."public/cart-layout.php";
-  require_once DIR."templates/cart-layout.php";
+<?php
+  require_once "public/cart-layout.php";
+  require_once "cart-layout.php";
 ?>

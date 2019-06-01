@@ -13,12 +13,14 @@
                 <input type="password" class="form-control" id="repassword" name="repassword" required>
             </div> 
             <div class="alert-danger mb-3">
-            <?php 
-                if ($_GET['error'] == 2) { 
-                    echo "Passwords must match </br>"; 
-                } elseif ($_GET['error'] == 1) {
-                    echo "User already exists </br>"; 
-                } 
+            <?php
+                if(isset($_GET['error'])) {
+                    if ($_GET['error'] == 2) {
+                        echo "Passwords must match </br>";
+                    } elseif ($_GET['error'] == 1) {
+                        echo "User already exists </br>";
+                    }
+                }
             ?>
             </div>
             <button type="submit" class="btn btn-primary">Register</button>

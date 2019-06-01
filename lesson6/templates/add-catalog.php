@@ -1,3 +1,4 @@
+
 <button type="button" class="mt-3 btn btn-primary" data-toggle="modal" data-target="#addProductModal">
   ADD PRODUCT TO CATALOG
 </button>
@@ -30,9 +31,9 @@
                 <select class="form-control" id="category" name="category">
                 <?php foreach ($options as $key => $option) :?>
                     <?php foreach ($option as $key => $value) :?>
-                            <?php 
+                            <?php
                                 if ( $key === "category" ) echo "<option>$value</option>";
-                            ?> 
+                            ?>
                     <?php endforeach; ?>
                 <?php endforeach; ?>
                 </select>
@@ -42,9 +43,9 @@
                 <select class="form-control" id="color" name="color">
                 <?php foreach ($options as $key => $option) :?>
                     <?php foreach ($option as $key => $value) :?>
-                            <?php 
+                            <?php
                                 if ( $key === "color" ) echo "<option>$value</option>";
-                            ?> 
+                            ?>
                     <?php endforeach; ?>
                 <?php endforeach; ?>
                 </select>
@@ -54,9 +55,9 @@
                 <select class="form-control" id="size" name="size">
                 <?php foreach ($options as $key => $option) :?>
                     <?php foreach ($option as $key => $value) :?>
-                            <?php 
+                            <?php
                                 if ( $key === "size" ) echo "<option>$value</option>";
-                            ?> 
+                            ?>
                     <?php endforeach; ?>
                 <?php endforeach; ?>
                 </select>
@@ -66,9 +67,9 @@
                 <select class="form-control" id="type" name="type">
                 <?php foreach ($options as $key => $option) :?>
                     <?php foreach ($option as $key => $value) :?>
-                            <?php 
+                            <?php
                                 if ( $key === "type" ) echo "<option>$value</option>";
-                            ?> 
+                            ?>
                     <?php endforeach; ?>
                 <?php endforeach; ?>
                 </select>

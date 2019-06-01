@@ -14,6 +14,5 @@ if (!$result) {
 }
 mysqli_query($link, $query);
 $response = mysqli_fetch_assoc(mysqli_query($link, "SELECT product_id, quantity FROM cart WHERE product_id = '$productId' AND user_id = $userId[id]"));
-mysqli_close($link);
 echo json_encode($response);
 die;

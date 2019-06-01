@@ -5,5 +5,4 @@ return [
     'db_name' => 'PHP',
     'db_host' => 'localhost'
 ];
-?>
 
