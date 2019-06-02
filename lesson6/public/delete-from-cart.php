@@ -1,5 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']."/lesson6/engine/init.php";
+session_start();
+$link = mysqli_connect("localhost", "user", "x4kbTNyvus4XNGxa", "PHP");
 $userId = mysqli_fetch_assoc(mysqli_query($link, "SELECT id FROM users WHERE username = '$_SESSION[username]'"));
 $productId = $_POST['product_id'];
 $cartProduct = mysqli_query($link, "SELECT * FROM cart WHERE product_id = '$productId' AND quantity > 1 AND user_id = '$userId[id]'");

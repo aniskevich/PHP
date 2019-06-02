@@ -1,4 +1,6 @@
 <?php
+session_start();
+$link = mysqli_connect("localhost", "user", "x4kbTNyvus4XNGxa", "PHP");
 $user = mysqli_fetch_assoc(mysqli_query($link, "SELECT username FROM users WHERE username = '$_POST[login]'"));
 if (!$user['username']) {
     if ($_POST['password'] === $_POST['repassword']) {
